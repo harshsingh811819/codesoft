@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navBar">
+            <div class="sectionName">
+                <h1><i>Harsh Singh</i></h1>
+            </div>
+            <div class="sectionLink">
+                <a href="#about">About</a>
+                <a href="#skillsSection">Skills</a>
+                <a href="#projectsSection">Projects</a>
+                <a href="#contactSection">contact</a>
+            </div>
+        </div>
+        <div class="right">        
+            <div class="mainContent">
+                 <section id="about">
+                    <div class="aboutSection">
+                            <div class="imageBox">
+                                    <img src="./project images/profile-image.png" alt="Image not found"><br>
+                            </div>
+                            <div class="paraBox">
+                                <h1>About Me:</h1>
+                                <div class="para">
+                                    <p> "As a recent graduate with a passion for web development, I am eager to embark on my professional journey. I possess foundational skills in HTML, CSS, and JavaScript, along with experience using frameworks like React and Node.js through various academic projects. My portfolio includes a responsive website I developed for a local business, where I focused on enhancing user experience and accessibility.<br>
+                
+                I am committed to continuous learning and am excited about the opportunity to work collaboratively in a team environment. My goal is to contribute to innovative web solutions while further developing my technical skills and understanding of industry best practices."
+                                    
+                                    </p>
+                                </div>
+                            </div>
+                    </div>
+                </section>
+                <section id="skillsSection">
+                    <div class="skills">
+                        <h1>My Skills</h1>
+                    <div class="skillbox">
+                        <div class="box1">
+                            <h1>Technical skills</h1>
+                        <div>
+                            <h2>HTML</h1>
+                        <progress value="60" max="100"></progress>
+                        <h2>CSS</h1>
+                        <progress value="60" max="100"></progress>
+                        <h2>JavaScript</h1>
+                        <progress value="30" max="100"></progress>
+                        </div>
+                        </div>
+                        <div class="box1">
+                            <h1>Professional skills</h1>
+                        <div>
+                            <h2>Problem Solving</h1>
+                        <progress value="70" max="100"></progress>
+                        <h2>Communication</h1>
+                        <progress value="50" max="100"></progress>
+                        <h2>Self Motivation</h1>
+                        <progress value="80" max="100"></progress>
+                        </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </section>  
+                 <section id="projectsSection">
+                    <div class="Pbox">
+                        <header>
+                            <h1>My Project Title</h1>
+                        </header>
+                        <div id="Pabout">
+                            <h3>About the Project</h3>
+                            <p>This project is a demonstration of how to create a simple project page using HTML and CSS. It showcases various features and designs.</p>
+                            <p>Technologies used: HTML, CSS, JavaScript.</p>
+                        </div>
+                        
+                    <div class="projects">
+                        <h2>Project Gallery</h2>
+                        <div class="Pbox">
+                            <div class="projectBox">
+                                <img src="./project images/image1.png" alt="not found"></img>
+                            
+                                <h1>Hit the bubble</h1>
+                            </div>
+                            <div class="projectBox">
+                                <img src="./project images/image2.png" alt="not found"></img>
+                                <h1>Social media website</h1>
+                            </div>
+                            <div class="projectBox">
+                                <img src="./project images/image3.png" alt="not found"></img>
+                                <h1>Story and toggle button</h1>
+                            </div>
+                            <div class="projectBox">
+                                <img src="./project images/image4.png" alt="not found"></img>
+                                <h1>Calculator</h1>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </section>
+                <section id="contactSection">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to reach out via email at <a href="harshsingh1852003@gmail.com">harshsingh1852003@gmail.com</a>.</p>
+                             <a href="Harsh-singh-Resume.pdf" download class="btn" >download</a>
+                </section>
+                <div class="footer">
+                    <p>&copy; 2024 My Project Page. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let section = document.querySelectorAll("section");
+        navLink = document.querySelectorAll('sectionLink a');
+        window.onscroll=()=>{
+            section.forEach(sec=>{
+                let top = window.scrollY;
+                let offset = sec.offsetTop-150;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+                if(top.offset && top<offset + height){
+                    navLink.forEach(link=>{
+                        link.classList.remove('active')
+                        document.querySelector('sectionLink a[href='+id+']');
+                    })
+                }
+            })
+        }
+    </script>
+</body>
+</html>
